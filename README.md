@@ -56,7 +56,7 @@ Throughout this project I have been implementing and reinforcing the following R
 
 ### State Management
 
-- `useState`
+- useState
 - Derived State
 - Controlled Components
 - Conditional Rendering
@@ -177,13 +177,6 @@ While developing Todo Machine, I practiced React fundamentals such as state mana
 - ✅ React Portals
 - ✅ Forms and Controlled Components
 - ✅ Deployment & Hosting (GitHub Pages)
-
-### Next Steps
-
-- 🔄 Portfolio Integration & Project Showcase
-- 🔄 React Ecosystem & Versioning Analysis
-- 🔄 Architectural Decisions: When to use React
-- 🔄 Modern React Tooling (CRA vs. Vite vs. Next.js)
 
 ## 🚀 Getting Started
 
