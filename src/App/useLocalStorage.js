@@ -2,13 +2,8 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 
 function useLocalStorage(itemName, initialValue) {
-  // Estado inicial del componente que llame a este custom hook(useLocalStorage())
-  // En el caso de los TODOs, va a comenzar con un array vacío
   const [item, setItem] = useState(initialValue);
-
-  // Estado de carga
   const [loading, setLoading] = useState(true);
-  // Estado de error
   const [error, setError] = useState(false);
 
   useEffect(() => {
