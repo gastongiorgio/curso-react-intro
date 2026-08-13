@@ -41,25 +41,29 @@ function App() {
         />
       </TodoHeader>
 
-      <TodoList>
-        {loading && (
-          <>
-            <TodosLoading />
-            <TodosLoading />
-            <TodosLoading />
-          </>
-        )}
-        {error && <TodosError />}
-
-        {(!loading && totalTodos === 0) && <EmptyTodos />}
-
-        {(!loading && totalTodos > 0 && searchedTodos.length === 0) && (
-          <p className="TodoList-emptySearch">
-            No se encontraron resultados para "{searchValue}"
-          </p>
-        )}
-
-        {searchedTodos.map(todo => (
+      <TodoList
+        error={error}
+        loading={loading}
+        searchedTodos={searchedTodos}
+        totalTodos={totalTodos}
+        searchText={searchValue}
+        onError={() => <TodosError />}
+        onLoading={() => <TodosLoading />}
+        onEmptyTodos={() => <EmptyTodos />}
+        onEmptySearchResults={
+          (searchText) => <p align="center">No hay resultados para "{searchText}"</p>
+        }
+        // render={todo => (
+        //   <TodoItem
+        //     key={todo.text}
+        //     text={todo.text}
+        //     completed={todo.completed}
+        //     onComplete={() => completeTodo(todo.text)}
+        //     onDelete={() => deleteTodo(todo.text)}
+        //   />
+        // )}
+      >
+        {todo => (
           <TodoItem
             key={todo.text}
             text={todo.text}
@@ -67,7 +71,7 @@ function App() {
             onComplete={() => completeTodo(todo.text)}
             onDelete={() => deleteTodo(todo.text)}
           />
-        ))}
+        )}
       </TodoList>
 
       <CreateTodoButton
