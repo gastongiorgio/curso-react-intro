@@ -73,8 +73,9 @@ Throughout this project I have been implementing and reinforcing the following R
 src/
 │
 ├── App/
-│   ├── AppUI.js
-│   └── index.js
+│   ├── index.js
+│   ├── useLocalStorage.js
+│   └── useTodos.js
 │
 ├── CreateTodoButton/
 │   ├── index.js
@@ -88,21 +89,16 @@ src/
 │   ├── index.js
 │   └── Modal.css
 │
-├── TodoContext/
-│   ├── useLocalStorage.js
-│   └── index.js
-│
 ├── TodoCounter/
 │   ├── index.js
 │   └── TodoCounter.css
 │
-├── TodoError/
-│   ├── index.js
-│   └── TodoError.css
-│
 ├── TodoForm/
 │   ├── index.js
 │   └── TodoForm.css
+|
+├── TodoHeader/
+│   └── index.js
 │
 ├── TodoIcon/
 │   ├── index.js
@@ -120,13 +116,17 @@ src/
 │   ├── index.js
 │   └── TodoList.css
 │
-├── TodoLoading/
-│   ├── index.js
-│   └── TodoLoading.css
-│
 ├── TodoSearch/
 │   ├── index.js
 │   └── TodoSearch.css
+|
+├── TodosError/
+│   ├── index.js
+│   └── TodosError.css
+│
+├── TodosLoading/
+│   ├── index.js
+│   └── TodosLoading.css
 │
 ├── index.css
 └── index.js
@@ -186,13 +186,13 @@ While developing Todo Machine, I practiced React fundamentals such as state mana
 
 ### Phase 2: Advanced Patterns & Composition (In Progress)
 
-[ ] React Design Principles & Healthy Composition
+✅ React Design Principles & Healthy Composition
 
-[ ] Render Patterns & State Colocation
+✅ Render Patterns & State Colocation
 
-[ ] Render Props & Render Functions
+✅ Render Props & Render Functions
 
-[ ] Eliminating React Context using Custom Hooks
+✅ Eliminating React Context using Custom Hooks
 
 [ ] React.Children and React.CloneElement API
 
