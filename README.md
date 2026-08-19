@@ -77,6 +77,11 @@ src/
 │   ├── useLocalStorage.js
 │   └── useTodos.js
 │
+├── ChangeAlert/
+│   ├── index.js
+│   ├── withStorageListener.js
+│   └── ChangeAlert.css
+│
 ├── CreateTodoButton/
 │   ├── index.js
 │   └── CreateTodoButton.css
@@ -96,7 +101,7 @@ src/
 ├── TodoForm/
 │   ├── index.js
 │   └── TodoForm.css
-|
+│
 ├── TodoHeader/
 │   └── index.js
 │
@@ -119,7 +124,7 @@ src/
 ├── TodoSearch/
 │   ├── index.js
 │   └── TodoSearch.css
-|
+│
 ├── TodosError/
 │   ├── index.js
 │   └── TodosError.css
@@ -132,9 +137,9 @@ src/
 └── index.js
 ```
 
-Each component lives inside its own directory, keeping its implementation and styles together. This organization improves maintainability, simplifies navigation, and makes the project easier to scale as new features are added.
+The project now follows a composition-based architecture powered by custom hooks, replacing the previous React Context implementation. 
 
-The application follows a component-based architecture, where each UI element has a single responsibility, making the code easier to maintain, understand, and extend.
+This branch introduces render functions and render props in `TodoList`, flexible component composition through `children`, prop injection with `React.Children` and `React.cloneElement`, and a Higher-Order Component that detects Local Storage changes across browser tabs and displays a synchronization alert. These patterns reduce component coupling, improve reusability, and demonstrate several approaches to sharing state and behavior in React.
 
 ## 🛠️ Technologies
 - React 18
