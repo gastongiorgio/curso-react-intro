@@ -5,6 +5,7 @@ function useLocalStorage(itemName, initialValue) {
   const [item, setItem] = useState(initialValue);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [sincronizedItem, setSincronizedItem] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
@@ -22,26 +23,32 @@ function useLocalStorage(itemName, initialValue) {
 
         setLoading(false);
 
+        setSincronizedItem(true);
+
       } catch (error) {
         setLoading(false);
         setError(true);
         console.log('Hubo un error cargando datos de localStorage: ' + error);
       }
     }, 2000);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [itemName]);
+  }, [sincronizedItem]);
 
-  // Actualizar localStorage y guardar el estado
   const saveItem = (newItem) => {
     localStorage.setItem(itemName, JSON.stringify(newItem));
     setItem(newItem);
   };
 
+  const sincronizeItem = () => {
+    setLoading(true);
+    setSincronizedItem(false);
+  }
+
   return {
     item,
     saveItem,
     loading,
-    error
+    error,
+    sincronizeItem
   };
 }
 

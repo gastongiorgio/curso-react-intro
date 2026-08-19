@@ -1,0 +1,73 @@
+.ChangeAlert-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1E1E1E;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(30, 30, 30, 0.85);
+}
+
+
+.ChangeAlert-container {
+    position: fixed;
+    bottom: -10px;
+    left: -10px;
+    right: -10px;
+    padding: 34px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
+    text-align: center;
+    color: #1E1E1F;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 420px;
+    width: calc(100% - 80px);
+    margin: 0 auto;
+}
+
+
+.ChangeAlert-container p {
+    margin: 0 0 16px 0;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+.ChangeAlert-container p:first-child {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.ChangeAlert-container .TodoForm-button {
+    margin-top: 12px;
+    width: auto;
+    min-width: 220px;
+    padding: 0 20px;
+}
+
+.ChangeAlert-button {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    color: #202329;
+    font-weight: 400;
+    width: auto;
+    min-width: 220px;
+    height: 48px;
+    border-radius: 2px;
+    border: none;
+    padding: 0 20px;
+    margin-top: 12px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ChangeAlert-button--add {
+    background: #61DAFA;
+    box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
+}
