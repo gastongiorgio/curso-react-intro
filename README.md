@@ -79,7 +79,7 @@ src/
 │
 ├── ChangeAlert/
 │   ├── index.js
-│   ├── withStorageListener.js
+│   ├── useStorageListener.js
 │   └── ChangeAlert.css
 │
 ├── CreateTodoButton/
@@ -189,23 +189,35 @@ While developing Todo Machine, I practiced React fundamentals such as state mana
 
 ✅ Deployment & Hosting (GitHub Pages)
 
-### Phase 2: Advanced Patterns & Composition (In Progress)
+## Phase 2: Advanced Patterns & Composition (✅ Completed)
 
-✅ React Design Principles & Healthy Composition
+✅ React Design Principles and Healthy Component Composition
 
-✅ Render Patterns & State Colocation
+✅ State Colocation and Application Architecture
 
-✅ Render Props & Render Functions
+✅ Component Composition with children
 
-✅ Eliminating React Context using Custom Hooks
+✅ Render Functions and Render Props
 
-[ ] React.Children and React.CloneElement API
+✅ Replacing React Context with Custom Hooks
 
-[ ] Higher-Order Components (HOCs) in JavaScript and React
+✅ React.Children API
 
-[ ] State Synchronization with LocalStorage & StorageListener
+✅ Prop Injection with React.cloneElement
 
-[ ] Pattern Comparison: Render Props vs. Custom Hooks
+✅ Higher-Order Components (HOCs)
+
+✅ Refactoring a HOC into a Custom Hook
+
+✅ Cross-tab State Synchronization with the Storage Event
+
+✅ Managing Browser Event Listeners with useEffect
+
+✅ Effect Cleanup with removeEventListener
+
+✅ Loading States During Data Synchronization
+
+✅ Pattern Comparison: Render Props, HOCs and Custom Hooks
 
 ## 🚀 Getting Started
 Clone the repository:
