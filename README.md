@@ -189,7 +189,7 @@ While developing Todo Machine, I practiced React fundamentals such as state mana
 
 ✅ Deployment & Hosting (GitHub Pages)
 
-## Phase 2: Advanced Patterns & Composition (✅ Completed)
+### Phase 2: Advanced Patterns & Composition (✅ Completed)
 
 *View the V2 source code here: [v2.0-patrones-avanzados Tag](https://github.com/gastongiorgio/curso-react/tree/v2.0-patrones-avanzados)*
 
