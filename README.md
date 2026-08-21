@@ -2,7 +2,7 @@
 
 > A React learning project focused on mastering component-based architecture, state management, custom hooks, and modern frontend development practices.
 
-![Status](https://img.shields.io/badge/Status-Deployed-success)
+![Status](https://img.shields.io/badge/Status-In_Progress-yellow)
 ![Deploy](https://img.shields.io/badge/Deploy-GitHub_Pages-181717?logo=github)
 ![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
@@ -11,7 +11,7 @@
 
 ## 🚀 Live Demo
 
-**[Experience the application live here!](https://gastongiorgio.github.io/curso-react-intro)**
+**[Experience the application live here!](https://gastongiorgio.github.io/curso-react)**
 
 ## 📖 About the Project
 
@@ -19,7 +19,7 @@ Todo Machine is a personal learning project developed while studying the React e
 
 Rather than building a production-ready task manager from day one, the goal of this repository is to **document my learning journey** by progressively implementing React concepts, improving the application's architecture, and adopting frontend best practices.
 
-Each completed feature represents a new milestone in my understanding of React, making this repository both a functional application and a record of my growth as a software developer.
+The project is structured in **Phases**, where each phase represents a new course and a deeper level of React architectural understanding.
 
 ## 📸 Preview
 
@@ -54,30 +54,18 @@ Throughout this project I have been implementing and reinforcing the following R
 - Props
 - Event Handling
 
-### State Management
+### State Management & APIs
 
-- useState
-- Derived State
-- Controlled Components
-- Conditional Rendering
-
-### Rendering
-
-- Rendering Lists
-- Dynamic CSS Classes
-- Reusable Components
-
-### Reusability
-
+- useState, useEffect, React Context
 - Custom Hooks
-- Component Separation
-- SVG Components
-- Separation of Concerns
+- Local Storage & Data Persistence
 
-### Browser APIs
+### Advanced Architecture (In Progress)
 
-- Local Storage
-- Data Persistence
+- Render Props & Render Functions
+- High-Order Components (HOC)
+- React.Children & React.CloneElement
+- Cross-tab State Synchronization (StorageListener)
 
 ## 🏗️ Project Structure
 
@@ -85,8 +73,14 @@ Throughout this project I have been implementing and reinforcing the following R
 src/
 │
 ├── App/
-│   ├── AppUI.js
-│   └── index.js
+│   ├── index.js
+│   ├── useLocalStorage.js
+│   └── useTodos.js
+│
+├── ChangeAlert/
+│   ├── index.js
+│   ├── useStorageListener.js
+│   └── ChangeAlert.css
 │
 ├── CreateTodoButton/
 │   ├── index.js
@@ -100,21 +94,16 @@ src/
 │   ├── index.js
 │   └── Modal.css
 │
-├── TodoContext/
-│   ├── useLocalStorage.js
-│   └── index.js
-│
 ├── TodoCounter/
 │   ├── index.js
 │   └── TodoCounter.css
 │
-├── TodoError/
-│   ├── index.js
-│   └── TodoError.css
-│
 ├── TodoForm/
 │   ├── index.js
 │   └── TodoForm.css
+│
+├── TodoHeader/
+│   └── index.js
 │
 ├── TodoIcon/
 │   ├── index.js
@@ -132,94 +121,138 @@ src/
 │   ├── index.js
 │   └── TodoList.css
 │
-├── TodoLoading/
-│   ├── index.js
-│   └── TodoLoading.css
-│
 ├── TodoSearch/
 │   ├── index.js
 │   └── TodoSearch.css
+│
+├── TodosError/
+│   ├── index.js
+│   └── TodosError.css
+│
+├── TodosLoading/
+│   ├── index.js
+│   └── TodosLoading.css
 │
 ├── index.css
 └── index.js
 ```
 
-Each component lives inside its own directory, keeping its implementation and styles together. This organization improves maintainability, simplifies navigation, and makes the project easier to scale as new features are added.
+The project now follows a composition-based architecture powered by custom hooks, replacing the previous React Context implementation. 
 
-The application follows a **component-based architecture**, where each UI element has a single responsibility, making the code easier to maintain, understand, and extend.
+This branch introduces render functions and render props in `TodoList`, flexible component composition through `children`, prop injection with `React.Children` and `React.cloneElement`, and a Higher-Order Component that detects Local Storage changes across browser tabs and displays a synchronization alert. These patterns reduce component coupling, improve reusability, and demonstrate several approaches to sharing state and behavior in React.
 
 ## 🛠️ Technologies
+- React 18
 
-- **React 18**
-- **JavaScript (ES6+)**
-- **CSS3** (BEM Methodology)
-- **Create React App**
-- **Local Storage API**
-- **GitHub Pages (gh-pages)**
+- JavaScript (ES6+)
+
+- CSS3 (BEM Methodology)
+
+- Create React App
+
+- Local Storage API
+
+- GitHub Pages (gh-pages)
 
 ## 💡 What I Learned
+This project helped me understand how to build user interfaces by thinking in reusable components instead of pages.
 
-This project helped me understand how to build user interfaces by thinking in **reusable components** instead of pages.
-
-While developing Todo Machine, I practiced React fundamentals such as state management, component composition, custom hooks, conditional rendering, and data persistence, reinforcing the importance of writing clean, maintainable, and scalable code.
+While developing Todo Machine, I practiced React fundamentals such as state management, component composition, custom hooks, conditional rendering, and data persistence, reinforcing the importance of writing clean, maintainable, and scalable code. Currently, I am refactoring the application to apply advanced render patterns for better scalability.
 
 ## 🗺️ Learning Roadmap
 
-- ✅ Component-based architecture
-- ✅ Props and state management
-- ✅ Event handling
-- ✅ Conditional rendering
-- ✅ Lists and dynamic rendering
-- ✅ Custom Hooks
-- ✅ Local Storage persistence
-- ✅ useEffect and Component Lifecycle
-- ✅ React Context API
-- ✅ React Portals
-- ✅ Forms and Controlled Components
-- ✅ Deployment & Hosting (GitHub Pages)
+### Phase 1: React Fundamentals (✅ Completed)
+
+*View the V1 source code here: [v1.0-fundamentos Tag](https://github.com/gastongiorgio/curso-react/tree/v1.0-fundamentos)*
+
+✅ Component-based architecture
+
+✅ Props and state management
+
+✅ Event handling
+
+✅ Conditional rendering
+
+✅ Lists and dynamic rendering
+
+✅ Custom Hooks
+
+✅ Local Storage persistence
+
+✅ useEffect and Component Lifecycle
+
+✅ React Context API
+
+✅ React Portals
+
+✅ Forms and Controlled Components
+
+✅ Deployment & Hosting (GitHub Pages)
+
+## Phase 2: Advanced Patterns & Composition (✅ Completed)
+
+*View the V2 source code here: [v2.0-patrones-avanzados Tag](https://github.com/gastongiorgio/curso-react/tree/v2.0-patrones-avanzados)*
+
+✅ React Design Principles and Healthy Component Composition
+
+✅ State Colocation and Application Architecture
+
+✅ Component Composition with children
+
+✅ Render Functions and Render Props
+
+✅ Replacing React Context with Custom Hooks
+
+✅ React.Children API
+
+✅ Prop Injection with React.cloneElement
+
+✅ Higher-Order Components (HOCs)
+
+✅ Refactoring a HOC into a Custom Hook
+
+✅ Cross-tab State Synchronization with the Storage Event
+
+✅ Managing Browser Event Listeners with useEffect
+
+✅ Effect Cleanup with removeEventListener
+
+✅ Loading States During Data Synchronization
+
+✅ Pattern Comparison: Render Props, HOCs and Custom Hooks
 
 ## 🚀 Getting Started
-
 Clone the repository:
 
-```bash
-git clone https://github.com/gastongiorgio/curso-react-intro.git
+```Bash
+git clone https://github.com/gastongiorgio/curso-react.git
 ```
 
 Navigate to the project:
 
-```bash
-cd curso-react-intro
+```Bash
+cd curso-react
 ```
 
 Install dependencies:
-
-```bash
+```Bash
 npm install
 ```
 
 Start the development server:
 
-```bash
+```Bash
 npm start
 ```
 
 Deploy to GitHub Pages:
-
-```Bash
+```
 npm run deploy
 ```
 
-Open your browser at:
-
-```
-http://localhost:3000
-```
-
----
+Open your browser at: http://localhost:3000
 
 ## 👨‍💻 About This Repository
-
 This repository is part of my journey learning React.
 
 Instead of treating it as a one-time course project, I use it as a place to progressively apply new concepts while improving the codebase, architecture, and development practices.

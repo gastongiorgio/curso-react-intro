@@ -1,5 +1,5 @@
 {
-  "name": "intro-react",
+  "name": "curso-react",
   "version": "0.1.0",
   "dependencies": {
     "react": "^18",
@@ -32,10 +32,10 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://gastongiorgio.github.io/curso-react-intro",
+  "homepage": "https://gastongiorgio.github.io/curso-react",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gastongiorgio/curso-react-intro.git"
+    "url": "https://github.com/gastongiorgio/curso-react.git"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"
